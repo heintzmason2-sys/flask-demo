@@ -8,3 +8,7 @@ def create_app():
         return "Hello, Mason!"
 
     return app
+
+    @app.get("/health")
+    def health():
+        return {"status": "ok"}
